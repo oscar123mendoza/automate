@@ -6,11 +6,11 @@ RSpec.configure do |c|
   c.filter_run_excluding :broken => true
 end
 
-describe 'automate-ctl' do
+describe 'workflow-ctl' do
   ctl_instance = AutomateCtl::Ctl.new()
   ctl_instance.load_files(File.expand_path('../../../lib/', __FILE__))
 
-  # An array of strings of every command in automate-ctl.
+  # An array of strings of every command in workflow-ctl.
   @all_commands = ctl_instance.command_map.keys
   let(:ctl) { ctl_instance }
   let(:file) { double('customer_id file')}
@@ -44,7 +44,7 @@ describe 'automate-ctl' do
 
   # Note: If one of these tests breaks unexpectedly on you,
   #       it most likely means you wrote a ctl command that
-  #       does not properly respond to --help! All automate-ctl
+  #       does not properly respond to --help! All workflow-ctl
   #       commands should respond to --help so please update your
   #       command to do so. Ping Tyler Cloke if you are still confused.
   @all_commands.each do |command|
