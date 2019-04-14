@@ -6,10 +6,7 @@ gem "mixlib-config"
 gem "mixlib-install"
 gem "mixlib-shellout"
 gem "train"
-gem "tty-spinner"
 
-# To prevent gem conflicts we must keep the Chef and Ohai version here
-# in sync with the versions in `omnibus_overrides.rb`
 gem "chef", "~> 12.21"
 gem "ohai", "~> 8.24"
 
