@@ -1,14 +1,10 @@
 #!/usr/bin/env ruby
+$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), "..", "lib")))
 
-require 'omnibus-ctl'
+require 'json'
+require 'fileutils'
+require 'automate_ctl/ctl'
 
-ctl = Omnibus::Ctl.new("delivery")
+ctl = AutomateCtl::Ctl.new()
 ctl.load_files(ENV["OMNIBUS_FILES"])
-# The omnibus delivery-ctl definition runs the omnibus-ctl executable,
-# which seems to append a couple of extra arguments between the command name
-# and options. Inserting these 2 spacers bewteen the command name (eg. `create-user`)
-# and the rest of the arguments allows the rest of the code to run unmodified
-# from the run() method.
-arguments = ARGV.insert(1, "", "")
-ctl.run(arguments)
-exit 0
+ctl.run(ARGV)

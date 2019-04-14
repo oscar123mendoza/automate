@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'omnibus-ctl'
+require 'automate_ctl/ctl'
 require 'tempfile'
 
 RSpec.configure do |c|
@@ -7,15 +7,11 @@ RSpec.configure do |c|
 end
 
 describe 'automate-ctl' do
-  ctl_instance = Omnibus::Ctl.new("automate-ctl")
+  ctl_instance = AutomateCtl::Ctl.new()
   ctl_instance.load_files(File.expand_path('../../../lib/', __FILE__))
 
   # An array of strings of every command in automate-ctl.
   @all_commands = ctl_instance.command_map.keys
-  ctl_instance.category_command_map.keys.each do |key|
-    @all_commands.concat ctl_instance.category_command_map[key].keys
-  end
-
   let(:ctl) { ctl_instance }
   let(:file) { double('customer_id file')}
   let(:delivery_running_json) do
@@ -46,20 +42,12 @@ describe 'automate-ctl' do
     ctl.fh_output.rewind
   end
 
-  # These are commands added by default from omnibus-ctl that
-  # do not respond to --help. Until we go refactor omnibus-ctl,
-  # we need to skip testing these commands.
-  # Please do not add your new commands to this list (implement --help instead)!
-  @omnibus_ctl_commands = ["show-config", "reconfigure", "cleanse", "int",
-                           "help", "uninstall", "service-list"]
-
   # Note: If one of these tests breaks unexpectedly on you,
   #       it most likely means you wrote a ctl command that
   #       does not properly respond to --help! All automate-ctl
   #       commands should respond to --help so please update your
   #       command to do so. Ping Tyler Cloke if you are still confused.
   @all_commands.each do |command|
-    next if @omnibus_ctl_commands.include?(command)
     context "when the user doesn't know how to run #{command}" do
       # Some of the backup commands need to mock out loading the config
       # before options and therefore --help can be parsed.
@@ -79,7 +67,7 @@ describe 'automate-ctl' do
       end
     end
 
-    describe 'when the user is not root' do
+    describe "when the user runs #{command} and is not root" do
       before do
         allow(Process).to receive(:uid).and_return(1)
       end
@@ -91,7 +79,7 @@ describe 'automate-ctl' do
           expect(e.status).to eq(1)
         end
       end
-    end
+    end unless command == "help"
   end
 
   describe 'when user is not root' do

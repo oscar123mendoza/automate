@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-gem "omnibus-ctl", git: "https://github.com/chef/omnibus-ctl.git"
-
 # The elasticsearch gem's major version should be the same as the version of
 # Elasticsearch that we require.
 gem 'elasticsearch', "~> 5"

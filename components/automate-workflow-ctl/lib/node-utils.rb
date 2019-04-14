@@ -1,4 +1,4 @@
-add_command_under_category "node-summary", "Node Utilies", "Get the summary of the nodes in Chef Automate", 2 do
+add_command "node-summary", "Get the summary of the nodes in Chef Automate", 2 do
   require "optparse"
   require "ctl-helpers/exit_handler"
   require "node-utils/node_utils"
@@ -36,7 +36,7 @@ add_command_under_category "node-summary", "Node Utilies", "Get the summary of t
   end
 end
 
-add_command_under_category "data-summary", "Node Utilies", "Get the summary of Chef Automate's data store", 2 do
+add_command "data-summary", "Get the summary of Chef Automate's data store", 2 do
   require "optparse"
   require "ctl-helpers/exit_handler"
   require "node-utils/node_utils"
@@ -102,7 +102,7 @@ add_command_under_category "data-summary", "Node Utilies", "Get the summary of C
   end
 end
 
-add_command_under_category "delete-node", "Node Utilies", "Delete a node from Chef Automate", 2 do
+add_command "delete-node", "Delete a node from Chef Automate", 2 do
   require "optparse"
   require "ctl-helpers/exit_handler"
   require "node-utils/node_utils"
