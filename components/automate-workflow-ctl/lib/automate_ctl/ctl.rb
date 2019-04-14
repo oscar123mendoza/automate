@@ -1,4 +1,6 @@
 module AutomateCtl
+  # Ctl is a stripped down version of omnibus-ctl. Any interfaces were
+  # weren't explicitly using have been removed.
   class Ctl
     attr_accessor :command_map, :fh_output, :verbose
     attr_reader :exe_name
