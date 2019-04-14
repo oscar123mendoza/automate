@@ -114,12 +114,6 @@ add_enterprise_command "delete-project", "Deletes an existing project", 2 do
   enterprise_ctl!('delete project', ARGV[1..-1])
 end
 
-## 911
-
-add_enterprise_command "doctor", "Ask the doctor what's wrong", 2 do
-  enterprise_ctl!('doctor')
-end
-
 ## Migrations
 
 ## This is a short lived migration call for updating the deliv_change db records
