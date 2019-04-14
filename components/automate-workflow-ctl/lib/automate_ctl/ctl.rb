@@ -43,11 +43,6 @@ module AutomateCtl
       fh_output.puts msg
     end
 
-    def run_command(command)
-      system(command)
-      $?
-    end
-
     def help(*args)
       log "#{exe_name}: command (subcommand)\n"
       command_map.keys.sort.each do |command|
