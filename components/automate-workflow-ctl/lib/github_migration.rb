@@ -2,7 +2,7 @@ add_command "migrate-github-project", "Migrate a project to new GitHub integrati
   require "ctl-helpers/erl"
   require "delivery-ctl-helpers/help"
 
-  args = ARGV[3..-1]
+  args = ARGV[1..-1]
 
   if DeliveryCtlHelpers::Help.help_asked_for? || args.empty?
     puts "Command: workflow-ctl migrate-github-project (ENTERPRISE | ENTERPRISE ORG | ENTERPRISE ORG PROJECT)"
