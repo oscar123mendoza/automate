@@ -1,8 +1,5 @@
 source "https://rubygems.org"
 
-# The elasticsearch gem's major version should be the same as the version of
-# Elasticsearch that we require.
-gem 'elasticsearch', "~> 5"
 gem "highline"
 gem "httpclient"
 gem "mixlib-config"
