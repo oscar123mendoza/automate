@@ -54,7 +54,6 @@ do_build() {
 do_install() {
   cp -R lib/* "$pkg_prefix/lib"
   install -m 0755 "bin/${CTL_BIN_NAME}" "$pkg_prefix/bin/${CTL_BIN_NAME}"
-  sed -i "s/{{CTL_ORIGIN}}/$pkg_origin/g" "$pkg_prefix/bin/${CTL_BIN_NAME}"
   install -m 0644 Gemfile.lock "$pkg_prefix/Gemfile.lock"
   install -m 0644 Gemfile "$pkg_prefix/Gemfile"
   cd $pkg_prefix
@@ -68,7 +67,6 @@ do_install() {
 
   fix_interpreter "$pkg_prefix/bin/*" core/coreutils bin/env
   fix_interpreter "$pkg_prefix/bin/*" core/ruby bin/ruby
-  fix_interpreter "$pkg_prefix/bin/$pkg_name.rb" core/coreutils bin/env
   fix_interpreter "$pkg_prefix/bin/knife" core/coreutils bin/env
 
   build_line "Creating bundler config"
