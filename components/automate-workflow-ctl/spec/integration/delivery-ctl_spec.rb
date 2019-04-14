@@ -24,14 +24,12 @@ describe 'workflow-ctl' do
   end
 
   def run_ctl_command(args)
-    # OmnibusCtl expects its arguments to be pre-parsed and passed in, but it
+    # Ctl expects its arguments to be pre-parsed and passed in, but it
     # only makes the command name + next arg available to commands.  To do further option
     # parsing, commands need to look at ARGV directly.
     # The bits below ensure commands see an ARGV that is the same size that they'll
-    # get in actual usage within delivery-ctl.
+    # get in actual usage within workflow-ctl.
     ARGV.clear
-    ARGV << "stub1"
-    ARGV << "stub2"
     args.each {|a| ARGV << a }
 
     # Create a new stream for each command executed to ensure that it contains
