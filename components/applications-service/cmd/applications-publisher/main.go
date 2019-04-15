@@ -100,6 +100,10 @@ func main() {
 	flag.Usage = usage
 	flag.Parse()
 
+	if uniqID {
+		clientID = "applications-publisher-" + strconv.FormatInt(t.UnixNano(), 10)
+	}
+
 	if internalNats {
 		client = nats.New(
 			fmt.Sprintf("nats://0.0.0.0:%s", port),
@@ -125,10 +129,6 @@ func main() {
 	// Convert proto enums
 	event.HealthCheck = applications.HealthStatus(health)
 	event.Status = applications.ServiceStatus(status)
-
-	if uniqID {
-		clientID = "applications-publisher-" + strconv.FormatInt(t.UnixNano(), 10)
-	}
 
 	if infiniteLoop {
 		err := client.Connect()
