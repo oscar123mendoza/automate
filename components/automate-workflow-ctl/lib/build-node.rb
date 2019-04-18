@@ -1,4 +1,4 @@
-add_command "install-build-node", "Configure the named node to act as a build node in this Delivery Cluster", 2 do
+add_command "install-build-node", "Configure the named node to act as a build node in this Delivery Cluster" do
   require 'optparse'
   require 'build-node/installer'
   require 'ctl-helpers/exceptions'

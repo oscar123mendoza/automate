@@ -48,7 +48,7 @@ end
 #       already parsed input -- not be a cli.
 #       However, flat out crashing when someone passes --help is pretty bad.
 def add_enterprise_command(command, description, useless, &block)
-  add_command command, description, 2 do
+  add_command command, description do
     usage = command + " [ARGS] [options..]\n"
     usage += "\nTry passing workflow-ctl #{command} with no arguments for additional details on usage."
     CtlHelpers::BasicUsage.new(ARGV[1..-1], usage, description).parse_help_and_display_usage

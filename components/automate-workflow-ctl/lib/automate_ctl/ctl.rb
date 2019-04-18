@@ -10,7 +10,6 @@ module AutomateCtl
       @exe_name = File.basename($0)
       @command_map = {
         "help" => {
-          :arity => 1,
           :desc => "Print this help message."
         }
       }
@@ -34,8 +33,8 @@ module AutomateCtl
       eval(IO.read(filepath), nil, filepath, 1)
     end
 
-    def add_command(name, description, arity = 1, &block)
-      @command_map[name] = { desc: description, arity: arity }
+    def add_command(name, description, hidden=false, &block)
+      @command_map[name] = { desc: description, hidden: hidden }
       self.class.send(:define_method, to_method_name(name).to_sym) { |*args| block.call(*args) }
     end
 
@@ -46,6 +45,7 @@ module AutomateCtl
     def help(*args)
       log "#{exe_name}: command (subcommand)\n"
       command_map.keys.sort.each do |command|
+        next if command_map[command][:hidden]
         log command
         log "  #{command_map[command][:desc]}"
       end
@@ -70,23 +70,15 @@ module AutomateCtl
         exit 0
       end
 
-      # returns either hash content of command or nil
-      command = command_map[cmd]
-      if command.nil?
+      if !command_map.has_key?(cmd)
         log "I don't know that command."
         help
         exit 1
       end
 
-      if args.length > 1 && command[:arity] != 2
-        log "The command #{command_to_run} does not accept any arguments"
-        exit 2
-      end
-
       File::umask(022)
       run_root_check!
-      method_to_call = to_method_name(cmd)
-      send(method_to_call, *cmd_args)
+      send(to_method_name(cmd), *cmd_args)
     end
 
     def run_root_check!

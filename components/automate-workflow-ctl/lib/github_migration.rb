@@ -1,4 +1,4 @@
-add_command "migrate-github-project", "Migrate a project to new GitHub integration.", 2 do
+add_command "migrate-github-project", "Migrate a project to new GitHub integration." do
   require "ctl-helpers/erl"
   require "delivery-ctl-helpers/help"
 
