@@ -630,7 +630,7 @@ These setup steps will make the process as productive as possible for you.
   then execute to define these shell variables:
 
 ```bash
-export TARGET_HOST=https://a2-dev.test/api/v0
+export TARGET_HOST=https://automate.tastyworks.com/api/v0
 export TOK="RyABKRdmg49UvOs7o73Q_Igcyng="
 export TOKEN_ARG="api-token: $TOK"
 ```

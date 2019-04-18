@@ -235,19 +235,19 @@ Creating Delivery project...
   Skipping: Delivery project named wftest already exists.
 Setting up the 'delivery' git remote...
   Skipping: The delivery git remote is up-to-date.
-  (ssh://admin@automate@a2-dev.test:8989/automate/rupert
+  (ssh://admin@automate@automate.tastyworks.com:8989/automate/rupert
   /wftest).
 Pushing initial git history...
-\The authenticity of host '[a2-dev.test]:8989
+\The authenticity of host '[automate.tastyworks.com]:8989
 ([127.0.0.1]:8989)' can't be established.
 RSA key fingerprint is
 SHA256:L+6QhMbxVD3I8Z3yCN1sUKbKbWGHEGjjBmyP71g0WdA.
 Are you sure you want to continue connecting (yes/no)?|-\-
 Git command failed!
 STDOUT:
-STDERR: Warning: Permanently added '[a2-dev.test]:8989'
+STDERR: Warning: Permanently added '[automate.tastyworks.com]:8989'
 (RSA) to the list of known hosts.
-admin@automate@a2-dev.test: Permission denied (publickey).
+admin@automate@automate.tastyworks.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights

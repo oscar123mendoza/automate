@@ -18,7 +18,7 @@ function genErrorResp(statusCode: number, msg: string): any /* HttpErrorResponse
   return {
     status: statusCode,
     statusText: 'Bad Request',
-    url: 'https://a2-dev.test/api/v0/license/apply',
+    url: 'https://automate.tastyworks.com/api/v0/license/apply',
     ok: false,
     name: 'HttpErrorResponse',
     message: 'Lorem ipsum...',

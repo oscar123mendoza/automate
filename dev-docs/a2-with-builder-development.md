@@ -39,12 +39,12 @@ pattern.
    Add (or update) entries for Builder and for A2.
 
    ```text
-   192.168.33.222 a2-dev.test
+   192.168.33.222 automate.tastyworks.com
    192.168.33.223 builder.test
    ```
 
    The IP address for `builder.test` comes from the Vagrantfile definition in step 2.
-   Similarly, the IP address for `a2-dev.test` must match the pre-existing Vagrantfile
+   Similarly, the IP address for `automate.tastyworks.com` must match the pre-existing Vagrantfile
    in your `a2` root.
 
 ## Setting up your Automate VM
@@ -94,7 +94,7 @@ pattern.
 
 3. Add A2's IP address and hostname to the `/etc/hosts`
    of this VM, just as you did with your host.
-   Test the connection to A2 with `ping a2-dev.test`.
+   Test the connection to A2 with `ping automate.tastyworks.com`.
 
 4. This is a good point to test the connection in the _other_ direction as well,
    now that the Builder VM exists.
@@ -112,11 +112,11 @@ pattern.
 
    export OAUTH_PROVIDER=chef-automate
 
-   export OAUTH_USERINFO_URL=https://a2-dev.test/session/userinfo
+   export OAUTH_USERINFO_URL=https://automate.tastyworks.com/session/userinfo
 
-   export OAUTH_AUTHORIZE_URL=https://a2-dev.test/session/new
+   export OAUTH_AUTHORIZE_URL=https://automate.tastyworks.com/session/new
 
-   export OAUTH_TOKEN_URL=https://a2-dev.test/session/token
+   export OAUTH_TOKEN_URL=https://automate.tastyworks.com/session/token
 
    export OAUTH_REDIRECT_URL=http://builder.test/
 

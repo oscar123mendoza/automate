@@ -3,7 +3,7 @@
    "timestamp_utc":"2018-06-08T16:37:53.000000Z",
    "start_time_utc":"2016-06-28T20:05:29.000000Z",
    "node_name":"insights.chef.co",
-   "failure_snippet":"Chef client run failure on [chef-server.insights.co] insights.chef.co : https://a2-dev.test/client-runs/0271e125-97dd-498a-b026-8448ee60aafe/runs/ba6acb91-1eaa-4c84-8d68-f19ee641e606\nError executing action `create` on resource 'file[/failed/file/resource]'\nfile[/failed/file/resource] (insights-test::default line 26) had an error: Chef::Exceptions::EnclosingDirectoryDoesNotExist: Parent directory /failed/file does not exist. \n",
+   "failure_snippet":"Chef client run failure on [chef-server.insights.co] insights.chef.co : https://automate.tastyworks.com/client-runs/0271e125-97dd-498a-b026-8448ee60aafe/runs/ba6acb91-1eaa-4c84-8d68-f19ee641e606\nError executing action `create` on resource 'file[/failed/file/resource]'\nfile[/failed/file/resource] (insights-test::default line 26) had an error: Chef::Exceptions::EnclosingDirectoryDoesNotExist: Parent directory /failed/file does not exist. \n",
    "exception_title":"Error executing action `create` on resource 'file[/failed/file/resource]'",
    "exception_message":"file[/failed/file/resource] (insights-test::default line 26) had an error: Chef::Exceptions::EnclosingDirectoryDoesNotExist: Parent directory /failed/file does not exist.",
    "exception_backtrace":[
@@ -62,6 +62,6 @@
       "/Users/aleff/.chefdk/gem/ruby/2.1.0/bin/bundle:22:in `<main>'"
    ],
    "end_time_utc":"2016-06-28T20:05:30.000000Z",
-   "automate_fqdn":"a2-dev.test",
-   "automate_failure_url":"https://a2-dev.test/client-runs/0271e125-97dd-498a-b026-8448ee60aafe/runs/ba6acb91-1eaa-4c84-8d68-f19ee641e606"
+   "automate_fqdn":"automate.tastyworks.com",
+   "automate_failure_url":"https://automate.tastyworks.com/client-runs/0271e125-97dd-498a-b026-8448ee60aafe/runs/ba6acb91-1eaa-4c84-8d68-f19ee641e606"
 }

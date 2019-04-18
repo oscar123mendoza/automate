@@ -50,7 +50,7 @@ func TestNewAuthenticatorRedirectsOIDCRequestsAtUpstream(t *testing.T) {
 }
 
 func TestDexIssuedTokenIsUnderstoodProperly(t *testing.T) {
-	issuer := "https://a2-dev.test/dex"
+	issuer := "https://automate.tastyworks.com/dex"
 	keys := `{
   "keys": [
     {

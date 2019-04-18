@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 9010, host: 9010
   config.vm.network "forwarded_port", guest: 2345, host: 2345
 
-  config.vm.hostname = 'a2-dev.test'
+  config.vm.hostname = 'automate.tastyworks.com'
   config.vm.network 'private_network', ip: '192.168.33.222'
 
   config.vm.provision "shell", inline: $install_hab

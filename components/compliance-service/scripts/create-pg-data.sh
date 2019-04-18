@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # to run this script:
-#    export A2_URL='https://a2-dev.test'
+#    export A2_URL='https://automate.tastyworks.com'
 #    export A2_TOKEN='SOME-TOKEN'
 #    export AUTOMATE_ACCEPTANCE_TARGET_HOST=some-host
 #    export AUTOMATE_ACCEPTANCE_TARGET_USERNAME=some-host

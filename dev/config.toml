@@ -6,7 +6,7 @@
   # The external fully qualified domain name.
   # When the application is deployed you should be able to access 'https://<fqdn>/'
   # to login.
-  fqdn = "a2-dev.test"
+  fqdn = "automate.tastyworks.com"
 
   # TLS certs for all external-facing services
   [[global.v1.frontend_tls]]
@@ -64,7 +64,7 @@ OhLQB1XeN74ezxt5eHocIRrWow==
 -----END PRIVATE KEY-----"""
 
 [elasticsearch.v1.sys.runtime]
-  es_java_opts = "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9010 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=a2-dev.test"
+  es_java_opts = "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9010 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=automate.tastyworks.com"
   heapsize = "2g"
 
 [elasticsearch.v1.sys.network]

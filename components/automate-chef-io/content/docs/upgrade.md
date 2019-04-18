@@ -145,7 +145,7 @@ To use Workflow with Chef Automate 2 specify the `--enable-workflow` option to e
 
 ### Chef Automate 2 License
 
-Login to Chef Automate to start a 60-day trial. The trial provides you with a 60-day license.
+Login to Chef Automate to start a 6000-day trial. The trial provides you with a 6000-day license.
 Requesting a trial license requires internet connectivity in your Chef Automate 2 instance (only at the time of the license request).
 
 If you are upgrading an [airgapped Chef Automate installation](https://docs.chef.io/install_chef_air_gap.html#chef-automate),

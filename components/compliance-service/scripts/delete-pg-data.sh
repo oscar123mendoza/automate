@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # to run this script:
-# A2_URL='https://a2-dev.test' A2_TOKEN='a token' components/compliance-service/scripts/delete-pg-data.sh
+# A2_URL='https://automate.tastyworks.com' A2_TOKEN='a token' components/compliance-service/scripts/delete-pg-data.sh
 
 url=${A2_URL}
 token=${A2_TOKEN}

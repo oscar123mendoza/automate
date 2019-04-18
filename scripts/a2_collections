@@ -21,7 +21,7 @@
 #    variable $TOK
 #       An admin token obtained from `get_admin_token` or `chef-automate admin-token`
 #    variable $TARGET_HOST
-#       A host running A2, typically `https://a2-dev.test`
+#       A host running A2, typically `https://automate.tastyworks.com`
 #
 # Examples:
 #     a2 users

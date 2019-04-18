@@ -58,7 +58,7 @@ Run `chef-automate config patch workflow.toml` to apply the configuration.
 ## Installing Runners
 
 1. Setup a runner host (Ubuntu assumed), and make sure that
-   1. a2-dev.test is in /etc/hosts
+   1. automate.tastyworks.com is in /etc/hosts
    2. An accessible SSH key is in authorized_keys of the ubuntu user
    3. The ubuntu user has passwordless sudo
 
@@ -70,7 +70,7 @@ Run `chef-automate config patch workflow.toml` to apply the configuration.
 NOTE:
 If you see something like:
     ERROR: Network Error: getaddrinfo: Name or service not known
-check that /etc/hosts has entries for a2-dev.test on both runner and a2 server.
+check that /etc/hosts has entries for automate.tastyworks.com on both runner and a2 server.
 
 ## Building Workflow UI
 

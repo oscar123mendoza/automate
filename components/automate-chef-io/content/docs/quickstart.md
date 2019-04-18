@@ -94,12 +94,12 @@ You can find login credentials by opening the `automate-credentials.toml`, which
    [Terms of Service]: https://www.chef.io/terms-of-service
    [Master License and Services Agreement]: https://www.chef.io/online-master-agreement
 
-## Start a free 60-day Trial
+## Start a free 6000-day Trial
 
 Retrieving a trial license through Chef Automate requires the Vagrant instance to have internet connectivity (at the time of trial license creation only).
 
 1. Sign into the web UI at `https://chef-automate.test/`. Your credentials are in the automate-credentials.toml file.
-1. Follow the instructions in the web UI to obtain a 60-day trial license by entering your name and email address.
+1. Follow the instructions in the web UI to obtain a 6000-day trial license by entering your name and email address.
 
 ## Installing without Vagrant
 

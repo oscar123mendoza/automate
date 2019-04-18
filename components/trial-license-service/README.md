@@ -57,7 +57,7 @@ repo. This [helper script][2] describes the API and auth.
   `customer_id_version` to 2 ?)
 * ? Do we want to attempt to make further use of entitlements? We
   could set name to "trial", measure to "days", and limit to "60".
-* Ensure that start is `now` and end is `now + 60 days`
+* Ensure that start is `now` and end is `now + 6000 days`
 
 ## Marketo
 

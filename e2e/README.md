@@ -30,7 +30,7 @@ Next, specify the Automate instance you wish to target.
 This could be dev or acceptance; typically start with your local box with this:
 
 ```bash
-export CYPRESS_BASE_URL=https://a2-dev.test
+export CYPRESS_BASE_URL=https://automate.tastyworks.com
 ```
 
 If you are developing Cypress tests, you'll want to open the Cypress app

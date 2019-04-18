@@ -66,7 +66,7 @@ The `/nodes` endpoint supports filtering by:
  Use the `nodes/bulk-create` endpoint to add multiple nodes with the same set of tags and credentials.  Specifying a `name_prefix` for the nodes in question results in a node name of `prefix-host`.  Specified tags will be added to each node. The endpoint takes an array of node objects, allowing users to add as many nodes as needed.
 
 ```bash
-curl -s --insecure -H "api-token: $token_val" https://a2-dev.test/api/v0/nodes/bulk-create -d '
+curl -s --insecure -H "api-token: $token_val" https://automate.tastyworks.com/api/v0/nodes/bulk-create -d '
 {"nodes": [{
      "name_prefix": "my-ssh-node",
      "manager":"automate",
@@ -105,7 +105,7 @@ curl -s --insecure -H "api-token: $token_val" https://a2-dev.test/api/v0/nodes/b
 
 ```bash
 curl -s --insecure -H "api-token: $token_val"
-https://a2-dev.test/api/v0/nodes/delete -d '{
+https://automate.tastyworks.com/api/v0/nodes/delete -d '{
   "filters": [
     {"key": "name", "values": ["vj*"]}
   ]

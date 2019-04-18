@@ -58,7 +58,7 @@ Navigate to `https://<chef-automate-fqdn>` in a browser and log in to Chef Autom
 the credentials provided in `automate-credentials.toml`.  Once you log in, Chef Automate
 prompts you for a license.
 
-When your Chef Automate instance is equipped with internet connectivity, you can get a 60-day trial license from there.
+When your Chef Automate instance is equipped with internet connectivity, you can get a 6000-day trial license from there.
 Alternatively, a license obtained by other means can be applied.
 
 ### Configure Data Collection

@@ -73,7 +73,7 @@ If you want to develop against the UI:
 # start_all_services
 ```
 
-Open <https://a2-dev.test> in your browser. Log in with `admin` and `chefautomate` as username and
+Open <https://automate.tastyworks.com> in your browser. Log in with `admin` and `chefautomate` as username and
 password, respectively.
 
 ## Setup
@@ -109,14 +109,14 @@ building the vagrant box). Both are fully supported, so choose whichever suits y
 ### Docker Setup
 
 - [Install Docker](https://docs.docker.com/engine/installation/#desktop).
-- Modify your `/etc/hosts` to resolve the hostname a2-dev.test to 127.0.0.1 (aka localhost)
-  by adding `a2-dev.test` to the line for 127.0.0.1:
+- Modify your `/etc/hosts` to resolve the hostname automate.tastyworks.com to 127.0.0.1 (aka localhost)
+  by adding `automate.tastyworks.com` to the line for 127.0.0.1:
 
 ```text
-127.0.0.1 localhost a2-dev.test
+127.0.0.1 localhost automate.tastyworks.com
 ```
 
-***NOTE*** Remove any other entry for a2-dev.test
+***NOTE*** Remove any other entry for automate.tastyworks.com
 
 - Run `hab studio enter`.
 
@@ -125,14 +125,14 @@ building the vagrant box). Both are fully supported, so choose whichever suits y
 - Install Vagrant either from [the Vagrant website](https://www.vagrantup.com/downloads.html)
   or `brew cask install vagrant`
 - [Install Virtualbox](https://www.virtualbox.org/wiki/Downloads)
-- Modify your `/etc/hosts` to resolve the hostname a2-dev.test (only need to do this once)
+- Modify your `/etc/hosts` to resolve the hostname automate.tastyworks.com (only need to do this once)
   by including the line:
 
 ```text
-192.168.33.222 a2-dev.test
+192.168.33.222 automate.tastyworks.com
 ```
 
-***NOTE*** Remove any other entry for a2-dev.test
+***NOTE*** Remove any other entry for automate.tastyworks.com
 
 - `vagrant up`
 - `vagrant ssh -- -R 4200:localhost:4200`
@@ -152,7 +152,7 @@ rid of any old, outdated builds before firing up the studio. The deploy tool wil
 builds before downloading the dev images, so if you have outdated builds lying around, you might run
 into issues (see "Rebuilding a Habitat Component" for details).
 
-The FQDN for the studio is <https://a2-dev.test>.
+The FQDN for the studio is <https://automate.tastyworks.com>.
 
 ### Spin Up Just What You Need
 

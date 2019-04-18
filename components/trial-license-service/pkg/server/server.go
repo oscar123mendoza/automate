@@ -19,7 +19,7 @@ import (
 
 // trialDays is the number of days for which we request a license from
 // license-generation-service (it's passed to the fetcher)
-const trialDays = 60
+const trialDays = 6000
 
 type trialRequest struct {
 	FirstName           string `json:"first_name"`

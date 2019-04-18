@@ -14,7 +14,7 @@ EOH
 
 
 function set_up_chef_server_test_environment() {
-  chef_server_hostname=${CONTAINER_HOSTNAME:-a2-dev.test}
+  chef_server_hostname=${CONTAINER_HOSTNAME:-automate.tastyworks.com}
   chef_server_url="https://${chef_server_hostname}/organizations/test"
   chef_server_pivotal_key_path="/hab/svc/automate-cs-oc-erchef/data/pivotal.pem"
   chef_server_pivotal_rb_path="/tmp/.pivotal.rb"

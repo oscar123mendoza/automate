@@ -169,7 +169,7 @@ class AutomateApiRequest < Inspec.resource(1)
   #   for our targets there.
   def do_ssl_verify?
     if target_hostname == "localhost" ||
-       target_hostname == "a2-dev.test" ||
+       target_hostname == "automate.tastyworks.com" ||
        target_hostname =~ /\d+\.\d+\.\d+\.\d+/
       return false
     end

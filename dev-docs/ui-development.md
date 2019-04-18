@@ -67,10 +67,10 @@ instead of using the `start_automate_ui_background` helper method._
 
 1. Run `npm run serve:hab` to start up the webserver.
 
-1. Open <https://a2-dev.test/> in your browser. Log in with an email and password of `admin`
+1. Open <https://automate.tastyworks.com/> in your browser. Log in with an email and password of `admin`
    and `chefautomate`, respectively. If you have issues with login, please clear all site data (local
-   and session storage and cookies) for `https://a2-dev.test` and re-navigate back to the root of
-   <https://a2-dev.test/>.
+   and session storage and cookies) for `https://automate.tastyworks.com` and re-navigate back to the root of
+   <https://automate.tastyworks.com/>.
 
 ### The Development Cycle: Making Changes to the UI Code
 

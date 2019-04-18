@@ -197,7 +197,7 @@ And should contain the entire AD record of our Admin user.
    ```bash
    $ cat /hab/svc/automate-dex/config/config.yml
 
-   issuer: https://a2-dev.test/dex
+   issuer: https://automate.tastyworks.com/dex
    enablePasswordDB: true
    storage:
      . . .
@@ -242,7 +242,7 @@ And should contain the entire AD record of our Admin user.
    ```
 
 5. Log in as the Admin user.
-   Open <https://a2-dev.test/> and instead of just showing a name and password prompt,
+   Open <https://automate.tastyworks.com/> and instead of just showing a name and password prompt,
    your login screen should now show a choice of login providers:
 
    ![login with LDAP enabled](./images/ldap/login-with-ldap-enabled.png)
